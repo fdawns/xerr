@@ -8,6 +8,7 @@ const OK int64 = 0
 
 const SystemError int64 = -1
 const ServerCommonError int64 = 100000
+const BusinessError int64 = 1020
 const RequestParamError int64 = 100002
 const DBError int64 = 100005
 const DBUpdateAffectedZeroError int64 = 100006

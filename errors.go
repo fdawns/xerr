@@ -104,7 +104,7 @@ func NewErrCode(errCode int64, e ...error) *CodeError {
 
 func NewErrMsg(errMsg string, e ...error) *CodeError {
 	err := &CodeError{
-		Code:    ServerCommonError,
+		Code:    BusinessError,
 		Message: errMsg,
 		err:     e,
 	}

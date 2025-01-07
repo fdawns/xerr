@@ -1,7 +1,5 @@
 package xerr
 
-import "github.com/pkg/errors"
-
 var message map[int64]string
 var code map[string]int64
 
@@ -43,11 +41,4 @@ func MapErrCode(msg string) int64 {
 func IsCodeErr(errCode int64) bool {
 	_, ok := message[errCode]
 	return ok
-}
-
-func NewError(errCode int64) error {
-	if v, ok := message[errCode]; ok {
-		return errors.New(v)
-	}
-	return errors.New(message[ServerCommonError])
 }
